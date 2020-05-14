@@ -1,0 +1,56 @@
+<ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start" (click)="goToEmployees()">
+        <ion-icon name="chevron-back-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+        <ion-button (click)="presentPopover($event)">
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+
+    <ion-title size="large">{{employee.employee_name}}</ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+    <ion-title class="ion-margin-top ion-margin-bottom" size="large">{{employee.employee_name}}</ion-title>
+
+    <ion-item>
+        <ion-col>
+            <ion-text class="ion-text-start" color="dark">
+                Nome Completo
+            </ion-text>
+        </ion-col>
+        <ion-col>
+            <div class="ion-text-end">
+                <ion-text class="ion-text-end" color="medium">{{employee.employee_name}}</ion-text>
+            </div>
+        </ion-col>
+    </ion-item>
+
+    <ion-item>
+        <ion-col>
+            <ion-text class="ion-text-start" color="dark">
+                Idade
+            </ion-text>
+        </ion-col>
+        <ion-col>
+            <div class="ion-text-end">
+                <ion-text class="ion-text-end" color="medium">{{employee.employee_age}}</ion-text>
+            </div>
+        </ion-col>
+    </ion-item>
+
+    <ion-item>
+        <ion-col>
+            <ion-text class="ion-text-start" color="dark">
+                Salário Anual
+            </ion-text>
+        </ion-col>
+        <ion-col>
+            <div class="ion-text-end">
+                <ion-text class="ion-text-end" color="medium">{{employee.employee_salary|currency:'':'R$'}}</ion-text>
+            </div>
+        </ion-col>
+    </ion-item>
+
+    <ion-button (click)="onEdit()" class="ion-margin" expand="block" color="danger" mode="ios">Editar perfil</ion-button>
+</ion-content>

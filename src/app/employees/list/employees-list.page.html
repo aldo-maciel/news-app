@@ -1,0 +1,24 @@
+<ion-toolbar>
+    <ion-buttons slot="primary" (click)="create()">
+        <ion-icon size="large" name="add-circle" color="danger"></ion-icon>
+    </ion-buttons>
+
+    <ion-title class="ion-text-xl-capitalize" color="dark">Empregados</ion-title>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-item class="employee" *ngFor="let employee of employees" (click)="goToDetail(employee)">
+            <ion-avatar class="employee-avatar">
+                <img *ngIf="employee.profile_image" [src]="employee.profile_image" [alt]="employee.employee_name">
+            </ion-avatar>
+            <ion-label class="employee-info">
+                <h3>
+                    <ion-label class="employee-name">{{employee.employee_name}}</ion-label>
+                </h3>
+                <p>Salário: {{employee.employee_salary|currency:'':''}}</p>
+            </ion-label>
+            <ion-icon color="medium" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+    </ion-list>
+</ion-content>

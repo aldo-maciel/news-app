@@ -1,0 +1,16 @@
+.employee {
+
+    &-avatar {
+        background-color: var(--ion-color-light-shade);
+        border-radius: 100%;
+        text-align: center;
+    }
+
+    &-info {
+        margin-left: .5rem;
+    }
+
+    &-name {
+        font-weight: 700;
+    }
+}

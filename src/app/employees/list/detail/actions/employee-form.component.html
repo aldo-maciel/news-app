@@ -1,0 +1,42 @@
+<ion-content fullscreen>
+    <form (ngSubmit)="onSave()">
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            <ion-item>
+                <ion-label position="stacked">Nome Completo
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input required
+                           type="text"
+                           [(ngModel)]="employee.employee_name"
+                           [ngModelOptions]="{standalone: true}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Idade
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input required
+                           type="text"
+                           [(ngModel)]="employee.employee_age"
+                           [ngModelOptions]="{standalone: true}">
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Salário
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input required
+                           type="text"
+                           [(ngModel)]="employee.employee_salary"
+                           [ngModelOptions]="{standalone: true}">
+                </ion-input>
+            </ion-item>
+        </ion-list>
+
+        <div class="ion-padding">
+            <ion-button expand="block" type="submit" class="ion-no-margin">Salvar</ion-button>
+        </div>
+    </form>
+</ion-content>
