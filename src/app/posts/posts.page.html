@@ -1,0 +1,33 @@
+<ion-toolbar>
+    <ion-buttons slot="primary">
+        <ion-icon size="large" name="add-circle" color="danger"></ion-icon>
+    </ion-buttons>
+    <ion-toolbar slot="start">
+        <ion-searchbar placeholder="buscar"></ion-searchbar>
+    </ion-toolbar>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+    <ion-title class="ion-margin-bottom ion-margin-top" size="large">Notícias</ion-title>
+
+    <ion-card *ngFor="let current of news;" (click)="goToDetail(current.id)">
+        <ion-card-header>
+            <ion-card-title>{{ current.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{ current.body }}</ion-card-content>
+        <ion-row class="ion-padding">
+            <ion-col size="sm">
+                <ion-icon icon="heart"></ion-icon>
+            </ion-col>
+            <ion-col size="sm">
+                <ion-text class="ion-margin-end">1125</ion-text>
+            </ion-col>
+            <ion-col size="sm">
+                <ion-icon name="chatbubble-ellipses"></ion-icon>
+            </ion-col>
+            <ion-col size="sm">
+                <ion-text>348</ion-text>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

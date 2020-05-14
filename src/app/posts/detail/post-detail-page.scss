@@ -1,0 +1,27 @@
+.post-detail {
+    &-card {
+        box-shadow: none;
+        padding: 0 1rem;
+
+        &-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: left;
+        }
+    }
+
+    &-comments {
+        box-shadow: none;
+        margin-top: 1rem;
+        padding: 0 1rem;
+
+        &-comment {
+            display: flex;
+            flex-direction: column;
+
+            .comment-text {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
