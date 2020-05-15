@@ -1,5 +1,5 @@
-# news-app
-### Ionic app
+# News App
+### Ionic project test
 
 ---
 ### News View
